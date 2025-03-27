@@ -1,0 +1,163 @@
+:root {
+    --teal: #3a5e6e;
+    --dark-blue: #1b1d2d; 
+    --slate-grey: #617373;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+
+}
+
+#username { 
+    text-transform: capitalize;
+}
+
+h1#role { 
+    font-size: 32px;
+    font-weight: 500;
+}
+
+h3 { 
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    letter-spacing: 0.25rem;
+}
+
+img.profile-photo {
+    object-fit: cover;
+    object-position: top;
+    border: white solid 0.5em;
+    border-radius: 50%;
+    display: block;
+}
+.header-side-container>img{
+    object-fit: cover;
+    object-position: top;
+}
+.image-container {
+    margin: 1em;
+    display: block;
+    justify-items: center;
+}
+.header-side-container { 
+    color: white;
+    background-color: var(--teal);
+}
+
+h1#role { 
+    font-size: 32px;
+    font-weight: 500;
+}
+
+h3 { 
+    font-size: 24px;
+}
+
+.header-grid-container { 
+    display: grid;
+    grid-template-columns: 1fr 70%;
+    grid-template-areas: 
+        "sidebar content"
+        "title title"
+/*         "skills education"
+        "skills summary" */
+}
+
+/* Barra Lateral (foto e habilidades) */
+.header-side-container {
+    order: 1;
+
+}
+.header-side-container>img{
+    object-fit: cover;
+    object-position: top;
+}
+.image-container {
+    margin: 1em;
+    display: block;
+    justify-items: center;
+}
+img.profile-photo {
+    width: 164px;
+    aspect-ratio: 1/1;
+}
+
+ul.skill-list>li {
+    cursor: pointer;
+    border-bottom: solid .12em #ffffff62;
+    margin: 0.25em 0;
+    padding: 0.25em;
+}
+ul.skill-list>li:hover {
+    background-color: #ffffff62;;
+    color: #444b4b;
+    font-weight: 600;
+    transition: all ease-in 0.25s;
+    border-radius: 4px;
+}
+ul.skill-list>li:active {
+    color: #f2f2f2; 
+    background-color: rgb(65, 69, 82);
+}
+
+
+/*Cabeçalho (nome, profissão, educação e resumo)*/
+.header-content-container { 
+    order:2;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+}
+/* Nome e Profissão */
+.name-role {
+    color: white;
+    background-color: var(--dark-blue);
+    text-align: center;
+}
+
+.name-role span {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+
+/* Formação*/
+.education { 
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+    background-color: var(--slate-grey);
+}
+
+.education #course, #timespan { /* Nome do Curso, Tempo */
+    font-size: 1.25rem;
+    font-weight: 750;
+}
+
+.education ul { 
+    margin: 1em 0;
+    list-style: none;
+}
+.education li {
+    text-align: center
+}
+
+p.summary {
+    text-align: justify;
+    font-style: italic;
+    padding: 0 2.5em;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.main-content-container {
+    order: 3;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
