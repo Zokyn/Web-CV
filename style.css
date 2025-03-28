@@ -46,6 +46,7 @@ img.profile-photo {
 .header-side-container { 
     color: white;
     background-color: var(--teal);
+    border-end-end-radius: 16px;
 }
 
 h1#role { 
@@ -85,17 +86,20 @@ img.profile-photo {
     width: 164px;
     aspect-ratio: 1/1;
 }
-
+ul.skill-list {
+    padding: 0 2em 3em;
+    list-style: none;
+}
 ul.skill-list>li {
     cursor: pointer;
+    font-weight: 600;
     border-bottom: solid .12em #ffffff62;
     margin: 0.25em 0;
     padding: 0.25em;
 }
 ul.skill-list>li:hover {
-    background-color: #ffffff62;;
     color: #444b4b;
-    font-weight: 600;
+    background-color: #ffffff62;;
     transition: all ease-in 0.25s;
     border-radius: 4px;
 }
@@ -120,16 +124,20 @@ ul.skill-list>li:active {
     text-align: center;
 }
 
-.name-role span {
+.name-role #name { /* Nome */
     font-size: 48px;
     font-weight: 700;
+}
+
+.name-role #role { /* Profissão */
+    margin:0;
 }
 
 
 /* Formação*/
 .education { 
     margin: 0;
-    padding: 0;
+    padding: 1em 0;
     text-align: center;
     color: white;
     background-color: var(--slate-grey);
@@ -140,18 +148,23 @@ ul.skill-list>li:active {
     font-weight: 750;
 }
 
-.education ul { 
-    margin: 1em 0;
+.education h3 {
+    margin: 0;    
+}
+
+.education ul.education-list { 
     list-style: none;
 }
-.education li {
+.education ul.education-list li {
+    font-size: 1.25rem;
     text-align: center
 }
 
 p.summary {
     text-align: justify;
     font-style: italic;
-    padding: 0 2.5em;
+    color: grey;
+    padding: 0 4em;
     font-size: 22px;
     font-weight: 600;
 }
