@@ -2,6 +2,7 @@
     --teal: #3a5e6e;
     --dark-blue: #1b1d2d; 
     --slate-grey: #617373;
+    --light-grey: #bbbbbb;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
 
 }
 
-#username { 
+#name { 
     text-transform: capitalize;
 }
 
@@ -71,7 +72,7 @@ h3 {
 /* Barra Lateral (foto e habilidades) */
 .header-side-container {
     order: 1;
-
+    padding-bottom: 3em;
 }
 .header-side-container>img{
     object-fit: cover;
@@ -87,7 +88,7 @@ img.profile-photo {
     aspect-ratio: 1/1;
 }
 ul.skill-list {
-    padding: 0 2em 3em;
+    padding: 0 2em;
     list-style: none;
 }
 ul.skill-list>li {
@@ -107,7 +108,30 @@ ul.skill-list>li:active {
     color: #f2f2f2; 
     background-color: rgb(65, 69, 82);
 }
+.contact-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    padding: 0.5em;
+    font-weight: 700;
+    gap: 16px;
+}
+.contact-list a.contact-link{
+    color:white;
+    text-decoration: none;
+    gap: 4px;
+    display: flex;
+    align-items: center;
+}
+.contact-list a.contact-link:hover{
+    color: grey;
+    transition: all ease-in 0.12s;
+}
 
+.icon {
+    height: 24px;
+}
 
 /*Cabeçalho (nome, profissão, educação e resumo)*/
 .header-content-container { 
@@ -173,4 +197,60 @@ p.summary {
     order: 3;
     grid-column-start: 1;
     grid-column-end: -1;
+}
+
+ul.previous-list {
+    margin: 0 6em;
+    list-style: none;
+    text-align: justify;
+}
+.previous-list .previous-header-container {
+    color: var(--light-grey);
+    font-weight: 700;
+    font-size: 22px;
+
+}
+
+.previous-list .previous-header-container .previous-header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.previous-header-top {
+    border-bottom: solid 0.15em var(--light-grey);
+}
+
+.previous-header-top *:first-child {
+    color: black;
+}
+
+.previous-container ul, .previous-container p {
+    font-size: 18px;
+}
+
+.previous-container p {
+    text-indent: 2em;
+}
+
+.previous-container p:last-child {
+    padding-bottom: 4em;
+}
+
+.footer-content-container {
+    padding: 1.5em 0;
+    color: white;
+    background-color: var(--teal);
+}
+
+.footer-content-container ul {
+    display: flex; 
+    flex-direction: row; 
+    list-style: none;
+    align-content: center;;
+    justify-content: space-evenly;
+}
+.footer-content-container ul li {
+    font-size: 20px;
+    align-self: center;
 }
