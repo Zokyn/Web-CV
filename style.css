@@ -132,6 +132,9 @@ ul.skill-list>li:active {
 .icon {
     height: 24px;
 }
+svg.icon {
+    stroke: white;
+}
 
 /*Cabeçalho (nome, profissão, educação e resumo)*/
 .header-content-container { 
