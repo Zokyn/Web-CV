@@ -108,6 +108,10 @@ ul.skill-list>li:active {
     color: #f2f2f2; 
     background-color: rgb(65, 69, 82);
 }
+ul.skill-list>li>a {
+    text-decoration: none;
+    color: inherit;
+}
 .contact-list {
     display: flex;
     flex-direction: row;
@@ -216,6 +220,13 @@ p.summary {
 .submenu-container .item-container a:hover {
     color: var(--teal);
     transition: all ease-in 0.3s;
+}
+.submenu-container .item-container.active {
+    cursor: default;
+}
+.submenu-container .item-container.active a{
+    color: #dddddd;
+    pointer-events: none;
 }
 
 ul.previous-list {
