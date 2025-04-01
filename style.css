@@ -112,7 +112,15 @@ nav>button,nav>a.home {
     padding: 1rem;
     background-color: transparent;
 }
-
+nav>button:hover { 
+    background-color: rgba(255, 255, 255, 0.26);
+}
+nav>button:hover i {
+    color:#929292;
+}
+nav>*, nav>button:hover, nav>button:hover i {
+    transition: all ease-in 0.12s;
+}
 /* Barra Lateral (foto e habilidades) */
 .header-side-container {
     order: 1;
@@ -121,18 +129,12 @@ nav>button,nav>a.home {
     transition: all ease-in-out 0.5s;
 
 }
-.header-side-container>img{
+.header-side-container img.profile-photo {
     object-fit: cover;
     object-position: top;
-}
-.header-side-container>.image-container {
-    margin: 1em;
-    display: block;
-    justify-items: center;
-}
-img.profile-photo {
     width: 164px;
     aspect-ratio: 1/1;
+    transition: all ease-out 0.5s;
 }
 .header-side-container.hidden{
     width: 0;
