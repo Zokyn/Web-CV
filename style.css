@@ -116,16 +116,16 @@ nav>button,nav>a.home {
 /* Barra Lateral (foto e habilidades) */
 .header-side-container {
     order: 1;
+    width: 100%;
     padding-bottom: 3em;
+    transition: all ease-in-out 0.5s;
+
 }
 .header-side-container>img{
     object-fit: cover;
     object-position: top;
 }
-.header-side-container.hidden{
-    display: none;
-}
-.image-container {
+.header-side-container>.image-container {
     margin: 1em;
     display: block;
     justify-items: center;
@@ -134,6 +134,16 @@ img.profile-photo {
     width: 164px;
     aspect-ratio: 1/1;
 }
+.header-side-container.hidden{
+    width: 0;
+    transition: all ease-in-out 0.5s;
+}
+.header-side-container.hidden img.profile-photo{
+    width: 0;
+    transition: all ease-out 0.5s;
+
+}
+
 ul.skill-list {
     padding: 0 2em;
     list-style: none;
