@@ -28,6 +28,11 @@ h3 {
     letter-spacing: 0.25rem;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 img.profile-photo {
     object-fit: cover;
     object-position: top;
@@ -50,15 +55,6 @@ img.profile-photo {
     border-end-end-radius: 16px;
 }
 
-h1#role { 
-    font-size: 32px;
-    font-weight: 500;
-}
-
-h3 { 
-    font-size: 24px;
-}
-
 .header-grid-container { 
     display: grid;
     grid-template-columns: 1fr 70%;
@@ -67,6 +63,36 @@ h3 {
         "title title"
 /*         "skills education"
         "skills summary" */
+}
+
+/* Barra de Navegação */
+nav {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    color: white;
+    background-color: var(--dark-blue);
+    font-size: 1.75em;
+    font-weight: 600;
+}
+nav * {
+    margin : 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    list-style: none;
+    align-self: stretch;
+}
+nav>a.brand {
+    padding: 0 2em;
+}
+nav>a {
+    padding: 2rem;
+}
+nav>a:hover {
+    color: rgb(190, 190, 190);
+    background-color: #444b4b48;
 }
 
 /* Barra Lateral (foto e habilidades) */
