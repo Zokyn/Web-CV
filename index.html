@@ -9,11 +9,30 @@
     <script src="https://kit.fontawesome.com/2e9058513c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <script>
+        var menuVisible = false;
+
+        function showMenu(){
+            if (menuVisible == true) {
+                menuVisible = false;
+                document.getElementById("menu").classList.add("hidden")
+                console.log("hide");
+            }
+            else {
+                menuVisible = true;
+                document.getElementById("menu").classList.remove("hidden")
+                console.log("show");
+            }
+        }
+    </script>
     <nav>
+        <button class="menu" onclick="showMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
         <a 
             href="index.html"
-            class="brand">
-            Gustavo Casaes
+            class="active home">
+            <i class="fa-solid fa-home"></i>
         </a>
         <a href="#education">
             Formação
@@ -55,7 +74,7 @@
                 Ciência da Computação.</p>
         </div>
         
-        <div class="header-side-container">
+        <div class="header-side-container hidden" id="menu">
             <div class="image-container">
                 <img 
                     src="images/img.jfif"

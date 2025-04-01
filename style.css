@@ -85,21 +85,32 @@ nav * {
     list-style: none;
     align-self: stretch;
 }
-nav>a.brand {
-    padding: 0 2em;
-}
+
 nav>a {
-    padding: 2rem;
+    padding: 0 2rem;
+}
+nav i {
+    color: white;
+    font-size: 64px;
+    align-self: center;
 }
 nav>a:hover {
     color: rgb(190, 190, 190);
     background-color: #444b4b48;
 }
-nav>a.active {
+nav>a.active, nav>a.home.active {
     cursor: default;
     pointer-events: none;
-    color: #aaa;
     background-color: var(--slate-grey);
+}
+nav>a.active, nav>a.home.active * {
+    color: #aaa;
+}
+nav>button,nav>a.home {
+    cursor: pointer;
+    border: none;
+    padding: 1rem;
+    background-color: transparent;
 }
 
 /* Barra Lateral (foto e habilidades) */
@@ -110,6 +121,9 @@ nav>a.active {
 .header-side-container>img{
     object-fit: cover;
     object-position: top;
+}
+.header-side-container.hidden{
+    display: none;
 }
 .image-container {
     margin: 1em;
