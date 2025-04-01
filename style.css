@@ -95,7 +95,12 @@ nav>a:hover {
     color: rgb(190, 190, 190);
     background-color: #444b4b48;
 }
-
+nav>a.active {
+    cursor: default;
+    pointer-events: none;
+    color: #aaa;
+    background-color: var(--slate-grey);
+}
 
 /* Barra Lateral (foto e habilidades) */
 .header-side-container {
