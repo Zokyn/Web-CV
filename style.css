@@ -60,9 +60,10 @@ img.profile-photo {
     grid-template-columns: 1fr 70%;
     grid-template-areas: 
         "sidebar content"
-        "title title"
+        "title title";
 /*         "skills education"
         "skills summary" */
+    margin-bottom: 5vh;
 }
 
 /* Barra de Navegação */
@@ -94,6 +95,7 @@ nav>a:hover {
     color: rgb(190, 190, 190);
     background-color: #444b4b48;
 }
+
 
 /* Barra Lateral (foto e habilidades) */
 .header-side-container {
@@ -271,17 +273,20 @@ ul.previous-list {
 
 footer {
     width: 100%;
-    position: absolute;
+    position: fixed;
+    height: 10vh;
+
     bottom: 0;
 }
 
 .footer-content-container {
-    padding: 1.5em 0;
     color: white;
     background-color: var(--teal);
 }
 
 .footer-content-container ul {
+    margin: 0;
+    height: 100%;
     display: flex; 
     flex-direction: row; 
     list-style: none;
