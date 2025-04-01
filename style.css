@@ -266,6 +266,12 @@ ul.previous-list {
     padding-bottom: 4em;
 }
 
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
 .footer-content-container {
     padding: 1.5em 0;
     color: white;
@@ -280,6 +286,7 @@ ul.previous-list {
     justify-content: space-evenly;
 }
 .footer-content-container ul li {
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 600;
     align-self: center;
 }
