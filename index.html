@@ -9,6 +9,36 @@
     <script src="https://kit.fontawesome.com/2e9058513c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <script>
+        function toggleDropdown(dropdown) {
+            var chevronElement = dropdown.firstElementChild;
+            var paragraphElement = dropdown.nextElementSibling; 
+            
+            if (chevronElement && chevronElement.classList.contains("fa-solid")) {
+                dropdown.firstElementChild.classList.toggle("fa-chevron-down");
+                dropdown.firstElementChild.classList.toggle("fa-chevron-right");
+            }
+            if (paragraphElement) {
+                paragraphElement.classList.toggle("hidden")
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded.')
+
+            const dropdownButtonsElements = document.querySelectorAll('[class*="dropdown"]');
+
+            const dropdownsList = Array.from(dropdownButtonsElements);
+
+            dropdownsList.forEach(dropdown => {
+                dropdown.nextElementSibling.classList.add("hidden")
+                dropdown.addEventListener('click', function() {
+                    toggleDropdown(this);
+                });
+            });
+        }) 
+
+    </script>
     <nav>
         <a 
             href="index.html"
@@ -129,7 +159,9 @@
                         
                         
                         <div class="section-container">
-                            <button class="section-dropdown dropdown">
+                            <button 
+                                name="dropdown-objetivo"
+                                class="section-dropdown dropdown">
                                 <i class="fa-solid fa-chevron-right"></i>
                                 <span>
                                     Objetivo
@@ -141,7 +173,9 @@
                         </div>
                         
                         <div class="section-container">
-                            <button class="section-dropdown dropdown">
+                            <button 
+                                name="dropdown-cenario"
+                                class="section-dropdown dropdown">
                                 <i class="fa-solid fa-chevron-right"></i>
                                 <span>
                                     Cenário
@@ -152,7 +186,9 @@
                             </p>
                         </div>
                         <div class="section-container">
-                            <button class="section-dropdown dropdown">
+                            <button 
+                                name="dropdown-resultados"
+                                class="section-dropdown dropdown">
                                 <i class="fa-solid fa-chevron-right"></i>
                                 <span>
                                     Resultados

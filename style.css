@@ -280,10 +280,6 @@ ul.content-list {
     text-indent: 2em;
 }
 
-.content-container p:last-child {
-    padding-bottom: 4em;
-}
-
 /* Lista de Imagens */
 @media (max-width: 910px) {
     ul.images {
@@ -316,8 +312,8 @@ ul.images>li figcaption {
     border-radius: 0 0 8px 8px;
 }
 
-.content-description-container .section-container>.section-container {
-    padding: 0 2em;
+.content-description-container .section-container {
+    padding: 1em 0;
 }
 .content-description-container .section-container>button.section-dropdown {
     font-weight: 600;
@@ -335,6 +331,11 @@ ul.images>li figcaption {
 }
 
 .content-description-container .section-container>p.section-description  {
+    border-top: solid var(--slate-grey) 3px;
+    padding-top: 1em;
+    display: block;
+}
+.content-description-container .section-container>p.section-description.hidden {
     display: none;
 }
 .content-description-container>.tools-description {
