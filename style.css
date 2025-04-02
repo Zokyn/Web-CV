@@ -11,13 +11,11 @@ body {
 
 }
 
-#name { 
+#name,#role { 
     text-transform: capitalize;
 }
-
-h1#role { 
-    font-size: 32px;
-    font-weight: 500;
+h1#role {
+    margin: 0;
 }
 
 h3 { 
@@ -49,20 +47,169 @@ img.profile-photo {
     display: block;
     justify-items: center;
 }
-.header-side-container { 
+div.header-container {
+    align-items: center;
+    background-color: var(--dark-blue);
     color: white;
-    background-color: var(--teal);
-    border-end-end-radius: 16px;
 }
+.header-skills-container {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 634px) {
+    nav {
+        justify-content: center;
+    }
+    nav>a {
+        padding: 2rem;
+        font-size: 1.5em;
+    }
+    nav>a.brand {
+        display: none;
+    }
+    main.container { 
+        display: flex;
+        flex-direction: column;
+    }
+    .header-content-container { 
+        order:1;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: start;
+    }
+    .header-skills-container {
+        order: 2;
+        padding-bottom: 3em;
+    }
+    img.profile-photo {
+        width: 124px;
+    }
+    .name-role #name{
+        text-align: center;
+        font-size: 64px;
+        font-weight: 700;
+    }
+    .name-role #role{
+        text-align: center;
+        font-size: 48px;
+        font-weight: 700;
+    }
+}
+@media (min-width: 720px) {
+    nav>a {
+        padding: 2rem;
+        font-size: 1.25em;
+    }
+    nav>a.brand {
+        display: block;
+        font-size: 1.75em;
+    }
+    main.container { 
+        display: flex;
+        flex-direction: column;
+    }
+    div.header-container {
+        display: grid;
+        grid-template-columns: 1fr 60%;
+    }
+    .header-photo-container {
+        order: 1;
+    }
+    .header-content-container { 
+        order: 2;
+    }
+    .header-skills-container {
+        grid-column: 1/-1;
+    }
+    .header-skills-container>ul.skill-list {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        flex-flow: column nowrap;
+    }
 
-main.grid-container { 
-    display: grid;
-    grid-template-columns: 1fr 60%;
-    grid-template-areas: 
-        "sidebar content"
-        "title title"
-/*         "skills education"
-        "skills summary" */
+    .name-role #name{
+        text-align: start;
+        font-size: 48px;
+        font-weight: 700;
+    }
+    .name-role #role{
+        text-align: start;
+        font-size: 32px;
+        font-weight: 700;
+    }
+    img.profile-photo {
+        width: 180px;
+    }
+}
+@media (min-width:1090px) {
+    nav {
+        justify-content: left;
+    }
+    nav>a {
+        padding: 2rem;
+        font-size: 2em;
+    }
+    nav>a.brand {
+        padding: 2rem;
+        font-size: 3em;
+    }
+    div.header-container {
+        display: grid;
+        grid-template-columns: 1fr 50% 20%;
+    }
+    .header-skills-container {
+        grid-column: 3;
+        display: flex;
+    }
+    .name-role * {
+        text-align: center;
+    }
+    /* Nome */
+    .name-role #name { 
+        font-size: 64px;
+        font-weight: 700;
+    }
+    /* Profissão */
+    .name-role #role {
+        font-size: 42px;
+    }
+    img.profile-photo {
+        width: 240px;
+    }
+    .header-skills-container>ul.skill-list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    .main-container {
+        margin: 2em 8em;
+    }
+}
+@media (min-width: 1600px) {
+    div.header-container {
+        display: grid;
+        grid-template-columns: 1fr 50% 30%;
+    }
+    .image-container {
+    }
+    img.profile-photo {
+        width: 320px;
+    }
+    /* Nome */
+    .name-role #name { 
+        font-size: 96px;
+        font-weight: 700;
+    }
+    /* Profissão */
+    .name-role #role {
+        font-size: 64px;
+    }
+    .main-container {
+        margin: 4em 24em;
+    }
 }
 
 /* Barra de Navegação */
@@ -84,12 +231,6 @@ nav * {
 }
 nav>a.brand {
     margin-right: auto;
-    padding: 0 2em;
-    font-size: 1.75em;
-}
-nav>a {
-    padding: 2rem;
-    font-size: 1.25em;
 }
 nav>a:hover {
     color: rgb(190, 190, 190);
@@ -98,7 +239,6 @@ nav>a:hover {
 
 /* Barra Lateral (foto e habilidades) */
 .header-side-container {
-    order: 1;
     padding-bottom: 3em;
 }
 .header-side-container>img{
@@ -111,7 +251,6 @@ nav>a:hover {
     justify-items: center;
 }
 img.profile-photo {
-    width: 164px;
     aspect-ratio: 1/1;
 }
 ul.skill-list {
@@ -165,27 +304,13 @@ svg.icon {
 
 /*Cabeçalho (nome, profissão, educação e resumo)*/
 .header-content-container { 
-    order:2;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: start;
-}
-/* Nome e Profissão */
-.name-role {
-    color: white;
-    background-color: var(--dark-blue);
     text-align: center;
 }
 
-.name-role #name { /* Nome */
-    font-size: 48px;
-    font-weight: 700;
-}
-
-.name-role #role { /* Profissão */
-    margin:0;
-}
 
 
 /* Formação*/
