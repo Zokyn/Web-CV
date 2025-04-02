@@ -79,12 +79,12 @@ nav * {
     margin : 0;
     display: flex;
     flex-direction: row;
-    justify-content: start;
     align-items: center;
     list-style: none;
     align-self: stretch;
 }
 nav>a.brand {
+    margin-right: auto;
     padding: 0 2em;
 }
 nav>a {
