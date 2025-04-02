@@ -55,9 +55,9 @@ img.profile-photo {
     border-end-end-radius: 16px;
 }
 
-.header-grid-container { 
+main.grid-container { 
     display: grid;
-    grid-template-columns: 1fr 70%;
+    grid-template-columns: 1fr 60%;
     grid-template-areas: 
         "sidebar content"
         "title title"
@@ -228,41 +228,41 @@ p.summary {
     grid-column-end: -1;
 }
 
-ul.previous-list {
+ul.content-list {
     margin: 0 6em;
     list-style: none;
     text-align: justify;
 }
-.previous-list .previous-header-container {
+.content-list .content-header-container {
     color: var(--light-grey);
     font-weight: 700;
     font-size: 22px;
 
 }
 
-.previous-list .previous-header-container .previous-header-top {
+.content-list .content-header-container .content-header-top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.previous-header-top {
+.content-header-top {
     border-bottom: solid 0.15em var(--light-grey);
 }
 
-.previous-header-top *:first-child {
+.content-header-top *:first-child {
     color: black;
 }
 
-.previous-container ul, .previous-container p {
+.content-container ul, .content-container p {
     font-size: 18px;
 }
 
-.previous-container p {
+.content-container p {
     text-indent: 2em;
 }
 
-.previous-container p:last-child {
+.content-container p:last-child {
     padding-bottom: 4em;
 }
 
