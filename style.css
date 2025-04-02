@@ -72,7 +72,6 @@ nav {
     align-items: center;
     color: white;
     background-color: var(--dark-blue);
-    font-size: 1.75em;
     font-weight: 600;
 }
 nav * {
@@ -86,9 +85,11 @@ nav * {
 nav>a.brand {
     margin-right: auto;
     padding: 0 2em;
+    font-size: 1.75em;
 }
 nav>a {
     padding: 2rem;
+    font-size: 1.25em;
 }
 nav>a:hover {
     color: rgb(190, 190, 190);
