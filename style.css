@@ -214,15 +214,6 @@ svg.icon {
     text-align: center
 }
 
-p.summary {
-    text-align: justify;
-    font-style: italic;
-    color: grey;
-    padding: 0 4em;
-    font-size: 22px;
-    font-weight: 600;
-}
-
 .main-content-container {
     order: 3;
     grid-column-start: 1;
@@ -245,6 +236,7 @@ ul.content-list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .content-header-top {
@@ -264,6 +256,7 @@ h2.content-title  {
     border-radius: 16px 16px 0 0;
     background-color: var(--teal);
 }
+
 .content-subheader .timespan {
     display: grid; 
     grid-template-columns: auto 2fr auto;
@@ -278,14 +271,52 @@ h2.content-title  {
     background-color: #ccc;
     position: relative;
 }
-.content-container ul, .content-container p {
-    font-size: 18px;
-}
 
-.content-container p {
+.content-container>p {
+    margin: 0 6em;
+    text-align: justify;
     text-indent: 2em;
 }
+span.badge {
+    font-size: 18px;
+    color: var(--light-grey);
+    background-color: var(--teal);
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+ul.content-list>li.sub-item.content-container{
+    padding-top: 1em;
+}
+ul.content-list>li.content-container>ul.content-list {
+    margin: 0;
+    padding: 0 2em;
+    list-style: circle;
+}
+li.sub-item.content-container .content-header-top{
+    border: none;
+}
 
+li.sub-item.content-container .content-header-container .content-summary {
+    color: white;
+    background-color: var(--teal);
+    border-radius: 4px 4px 0 0;
+    padding: 0 1em;
+}
+li.sub-item.content-container .content-container ul, .content-container p {
+    font-size: 18px;
+}
+li.sub-item.content-container p {
+    font-weight: normal;
+    background-color: var(--light-grey);
+    color:  var(--teal);
+    margin: 0;
+    padding: 0  2em 2em 2em;
+    border-bottom: solid var(--teal) 3px;
+    border-radius: 0 0 4px 4px;
+}
+ul.content-list.hidden{
+    display: none;
+}
 /* Lista de Imagens */
 @media (max-width: 910px) {
     ul.images {
@@ -404,6 +435,13 @@ button.section-dropdown.active {
 button.section-dropdown:hover, button.section-dropdown.active:hover {
     color: var(--slate-grey);
     transition: all ease-in-out 0.5s;
+}
+button.section-dropdown:disabled {
+    cursor: default;
+    border-bottom: solid transparent 3px;
+}
+button.section-dropdown:disabled i {
+    display: none;
 }
 
 .footer-content-container {

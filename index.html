@@ -33,17 +33,18 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM loaded.')
 
             const dropdownButtonsElements = document.querySelectorAll('[class*="dropdown"]');
 
             const dropdownsList = Array.from(dropdownButtonsElements);
 
             dropdownsList.forEach(dropdown => {
-                dropdown.nextElementSibling.classList.add("hidden")
-                dropdown.addEventListener('click', function() {
-                    toggleDropdown(this);
-                });
+                if(dropdown.nextElementSibling) {
+                    dropdown.nextElementSibling.classList.add("hidden")
+                    dropdown.addEventListener('click', function() {
+                        toggleDropdown(this);
+                    });
+                }
             });
         }) 
 
@@ -54,55 +55,33 @@
             class="brand">
             Gustavo Casaes
         </a>
+        <a href="#previous">
+            Experiências
+        </a>
         <a href="#education">
             Formação
         </a>
         <a href="#projects">
             Projetos
         </a>
-        <a href="#previous">
-            Experiências
-        </a>
     </nav>
 
     <main class="grid-container">
         <div class="header-content-container">
             <div class="name-role">
+                <div class="image-container">
+                    <img 
+                        src="images/img.jfif"
+                        class="profile-photo"
+                        />
+                </div>
                 <span id="name">Gustavo Casaes</span>
                 <h1 id="role">Desenvolvedor de Software</h1>
-            </div>
-
-            <div>
-                <h3>Sobre mim</h3>
-                <p class="summary">Desenvolvedor de Software com foco 
-                    em desenvolvimento Web com
-                    experiência em tecnologias específicas,
-                    como ASP.NET, C#, Entity Framework,
-                    atualmente cursando graduação em
-                    Ciência da Computação.</p>
-                    <div class="education">
-                        <span id="course">Graduando em Ciência da Computação</span>
-                        <ul class="education education-list">
-                            <li>
-                                Universidade Federal do Tocantins - <b>UFT</b>
-                                <div><b>2018 - 2023 </b></div>
-                            </li>
-                            <li>
-                                Universidade Jorge Amado - <b>Unijorge</b>
-                                <div><b>2025 - 2027(Previsão)</b></div>
-                            </li>
-                        </ul>
-                    </div>
             </div>
         </div>
         
         <div class="header-side-container">
-            <div class="image-container">
-                <img 
-                    src="images/img.jfif"
-                    class="profile-photo"
-                    />
-                </div>
+            
             <h3>Habilidades</h3>
             <ul class="skill-list">
                 <li>C++, C#, .NET</li>
@@ -124,6 +103,20 @@
                     <i class="fa-brands fa-github"></i>
                     <span>GitHub</span>
                 </a>
+            </div>
+        </div>
+
+        <div class="main-content-container" id="#home">
+            <h3>Sobre mim</h3>
+            <div class="content-container">
+                <p>
+                    Desenvolvedor de Software com foco 
+                    em desenvolvimento Web com
+                    experiência em tecnologias específicas,
+                    como ASP.NET, C#, Entity Framework,
+                    atualmente cursando graduação em
+                    Ciência da Computação.
+                </p>
             </div>
         </div>
 
@@ -204,17 +197,31 @@
                 </h3>
             </a>
             <ul class="content-list">
-                <li class="content-container">
-                    <div>
-                        <b>Universidade Federal do Tocantins</b>
-                        <span>2018-2023</span>
-                    </div>
-                    <ul>
-                        <li class="content-container">
+                <li class="content-header-container content-container">
+                    <span>2025-2027(Previsão)</span>
+                    <button class="content-header-top section-dropdown dropdown" disabled>
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <div>
+                            <span>Universidade Jorge Amado</span>
+                        </div>
+                    </button>
+                </li>
+                <li class="content-header-container content-container">
+                    <span>2018-2023</span>
+                    
+                    <button class="content-header-top section-dropdown dropdown">
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <div>
+                            <span>Universidade Federal do Tocantins</span>
+                        </div>
+                    </button>
+
+                    <ul class="content-list" name="formation-section-1">
+                        <li class="sub-item content-container">
                             <div class="content-header-container">
                                 <div class="content-header-top">
                                     <span>Liga Acadêmica de Xadrez</span>
-                                    <i>LAX</i>
+                                    <span class="badge">LAX</span>
                                 </div>
                                 <div class="content-subheader">
                                     <div class="timespan">
@@ -225,19 +232,21 @@
                                         <span class="time-end">
                                             Julho de 2023
                                         </span>
-                                        Presidente/Membro Fundador
                                     </div>
+                                </div>
+                                <div class="content-summary">
+                                    Presidente/Membro Fundador
                                 </div>
                             </div>
                             <p>
                                 Fundador e Presidente da Liga Acadêmica de Xadrez a fim de propor partidas organizadas, estudos sobre jogadas, partilha de livros e conteúdos relacionados além de introduzi-los na comunidade local como em escolas.
                             </p>
                         </li>
-                        <li class="content-container">
+                        <li class="sub-item content-container">
                             <div class="content-header-container">
                                 <div class="content-header-top">
                                     <span>Liga Acadêmica de Inteligência Artificial</span>
-                                    <b>LAIA</b>
+                                    <span class="badge">LAIA</span>
                                 </div>
                                 <div class="content-subheader">
                                     <div class="timespan">
@@ -248,6 +257,8 @@
                                         <span class="time-end">
                                             Julho de 2023
                                         </span>
+                                    </div>
+                                    <div class="content-summary">
                                         Presidente/Membro Fundador
                                     </div>
                                 </div>
@@ -258,12 +269,7 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <div>
-                        <b>Universidade Jorge Amado</b>
-                        <span>2025-2027(Previsão)</span>
-                    </div>
-                </li>
+
             </ul>
         </div>
 
