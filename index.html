@@ -14,6 +14,15 @@
             var chevronElement = dropdown.firstElementChild;
             var paragraphElement = dropdown.nextElementSibling; 
             
+            if (dropdown.classList.contains("dropdown")){
+                if(dropdown.classList.contains("active")) {
+                    setTimeout(() => {
+                        dropdown.classList.toggle('active');
+                    }, 500)
+                } else 
+                    dropdown.classList.toggle('active')
+            }
+            
             if (chevronElement && chevronElement.classList.contains("fa-solid")) {
                 dropdown.firstElementChild.classList.toggle("fa-chevron-down");
                 dropdown.firstElementChild.classList.toggle("fa-chevron-right");
@@ -123,15 +132,14 @@
             <ul class="content-list">
                 <li class="content-container">
                     <div class="content-header-container">
-                        
+                        <h2 class="content-title">
+                            Descoberta de Conhecimento na Base de Dados do Sistema de Informação de Agravos de Notificação no Contexto da Hanseníase no Tocantins
+                        </h2>
                         <div class="content-header-top">
                             <span>Projeto de Pesquisa - PIBIC</span>
                             <i>Universidade Federal do Tocantins</i>
                         </div>
                         <div class="content-subheader">
-                            <h2>
-                                Descoberta de Conhecimento na Base de Dados do Sistema de Informação de Agravos de Notificação no Contexto da Hanseníase no Tocantins
-                            </h2>
                             <div class="timespan">
                                 <span class="time-start">01 de Setembro de 2021</span>
                                 <div class="time-line"></div>
@@ -202,12 +210,36 @@
                         <div class="tools-description">
                             <h4>Tecnologias Usadas</h4>
                             <ul class="tools-list">
-                                <li>Pandas</li>
-                                <li>JavaScript</li>
-                                <li>NPM</li>
-                                <li>Node</li>
-                                <li>Json</li>
-                                <li>Leafy</li>
+                                <li class="tool-item">
+                                    <i class="fa-brands fa-js"></i>
+                                    <span>JavaScript</span>
+                                </li>
+                                <li class="tool-item">
+                                    <i class="fa-brands fa-npm"></i>
+                                    <span>NPM</span>
+                                </li>
+                                <li class="tool-item">
+                                    <i class="fa-brands fa-node-js"></i>
+                                    <span>Node</span>
+                                </li>
+                                <li class="tool-item">
+                                    <img 
+                                        src="images/icons/json.svg" 
+                                        class="icon-image"/>
+                                    <span>Json</span>
+                                </li>
+                                <li class="tool-item">
+                                    <img 
+                                        src="images/icons/leaflet.svg"
+                                        class="icon-image"/>
+                                    <span>Leaflet</span>
+                                </li>
+                                <li class="tool-item">
+                                    <img 
+                                        src="images/icons/pandas.svg" 
+                                        class="icon-image"/>
+                                    <span>Pandas</span>
+                                </li>
                             </ul>
                         </div>
                         
