@@ -253,7 +253,25 @@ ul.content-list {
 .content-header-top *:first-child {
     color: black;
 }
-
+.content-subheader h2 {
+    padding: 0 2em;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--teal)
+}
+.content-subheader .timespan {
+    display: grid; 
+    grid-template-columns: auto 2fr auto;
+    align-items: center;
+    text-align: justify;
+}
+.content-subheader .timespan>.time-line {
+    height: 3px;
+    margin: 0 1em;
+    background-color: #ccc;
+    position: relative;
+}
 .content-container ul, .content-container p {
     font-size: 18px;
 }
@@ -298,10 +316,54 @@ ul.images>li figcaption {
     border-radius: 0 0 8px 8px;
 }
 
+.content-description-container .section-container>.section-container {
+    padding: 0 2em;
+}
+.content-description-container .section-container>button.section-dropdown {
+    font-weight: 600;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    color: var(--dark-blue);
+    border-bottom: solid transparent 3px;
+    background-color: transparent;
+}
+.content-description-container .section-container>button.section-dropdown:hover {
+    color: var(--slate-grey);
+    border-bottom: solid var(--slate-grey) 3px;
+    transition: all ease-in-out 0.5s;
+}
+
+.content-description-container .section-container>p.section-description  {
+    display: none;
+}
+.content-description-container>.tools-description {
+    padding-bottom: 3rem;
+}
+.content-description-container>.tools-description h4 {
+    text-align: center;
+    color: var(--teal);
+    padding-bottom: 0.25em;
+    border-bottom: solid var(--teal) 3px;
+    font-size: 24px;
+}
+.content-description-container>.tools-description ul { 
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
 .footer-content-container {
     padding: 1.5em 0;
     color: white;
     background-color: var(--teal);
+}
+
+.content-description-container {
+    border-radius: 4px;
+    border-bottom: solid var(--light-grey) 3px;
 }
 
 .footer-content-container ul {
