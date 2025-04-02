@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gustavo Casaes</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2e9058513c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav>
@@ -72,17 +73,14 @@
                 <a 
                     class="contact-link"
                     href="https://www.linkedin.com/in/gustavo-casaes-alves-043a31234/">
-                    <img class="icon" 
-                        src="images/linkedin-icon.png" />
+                    <i class="fa-brands fa-linkedin"></i>
                     LinkedIn
                 </a>
                 <a 
                     class="contact-link"
                     href="https://github.com/Zokyn">
-                    <img 
-                        class="icon"
-                        src="images/github-icon.png" />
-                    GitHub
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
                 </a>
             </div>
         </div>
@@ -252,19 +250,24 @@
     </main>
 
     <footer class="footer-content-container">
-        <ul>
-            <li id="local">
-                Rua Jaciara Ferreira Freitas, Itinga
-                <br> 
-                Lauro de Freitas, BA, 42738-630
-            </li>
-            <li id="telephone">
-                +55 (73) 9 8835-2784
-            </li>
-            <li id="email">
-                gustavocasaesalves@gmail.com
-            </li>
-        </ul>
+        <div class="contact-list">
+            <a id="local">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>
+                    Rua Jaciara Ferreira Freitas, Itinga
+                    <br> 
+                    Lauro de Freitas, BA, 42738-630
+                </span>
+            </a>
+            <a href="tel:+5573988352784" id="telephone">
+                <i class="fa-solid fa-phone"></i>
+                <span>+55 (73) 9 8835-2784</span>
+            </a>
+            <a href="mailto:gustavocasaesalves@gmail.com" id="email">
+                <i class="fa-solid fa-envelope"></i>
+                <span>gustavocasaesalves@gmail.com</span>
+            </a>
+        </div>
     </footer>
 
 </body>
